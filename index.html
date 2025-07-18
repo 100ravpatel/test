@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Carter | Software Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; transition: background-color 0.3s, color 0.3s; }
+    .dark { background-color: #1f2937; color: #f3f4f6; }
+    .section-hidden { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+    .section-visible { opacity: 1; transform: translateY(0); }
+    .skill-bar { width: 0; transition: width 1.5s ease-in-out; }
+    .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Navbar -->
+  <nav class="bg-white dark:bg-gray-800 shadow-md fixed w-full z-20">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold text-gray-800 dark:text-white">Alex Carter</a>
+      <div class="flex items-center space-x-4">
+        <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">About</a>
+        <a href="#experience" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Experience</a>
+        <a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Projects</a>
+        <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+        <button id="theme-toggle" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+    <div class="text-center px-4">
+      <h1 class="text-5xl font-bold mb-4">Alex Carter</h1>
+      <p class="text-2xl mb-6">Software Engineer | Snowflake Developer at Apple</p>
+      <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-white dark:bg-gray-900 section-hidden">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8 text-center">About Me</h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+        I'm a passionate Software Engineer with over 5 years of experience specializing in cloud data platforms and backend development. Currently, I work at Apple as a Snowflake Developer, where I design and optimize large-scale data pipelines to support innovative products. My expertise lies in Snowflake, Python, SQL, and cloud technologies like AWS and Azure. I thrive on solving complex problems and delivering scalable solutions that drive business impact.
+      </p>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-16 bg-gray-100 dark:bg-gray-800 section-hidden">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8 text-center">Experience</h2>
+      <div class="space-y-6">
+        <!-- Apple -->
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md card-hover">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Software Engineer - Snowflake Developer</h3>
+          <p class="text-gray-600 dark:text-gray-300">Apple Inc. | June 2022 - Present</p>
+          <ul class="list-disc pl-5 mt-2 text-gray-600 dark:text-gray-300">
+            <li>Designed and implemented Snowflake-based data warehouses to support Apple's internal analytics platforms.</li>
+            <li>Optimized data pipelines, reducing query execution time by 40% through advanced Snowflake features like clustering and materialized views.</li>
+            <li>Collaborated with cross-functional teams to integrate Snowflake with AWS S3 and Azure Data Lake for seamless data ingestion.</li>
+            <li>Developed Python scripts for ETL processes, automating data workflows and improving efficiency by 30%.</li>
+          </ul>
+        </div>
+        <!-- Previous Role -->
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md card-hover">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Data Engineer</h3>
+          <p class="text-gray-600 dark:text-gray-300">TechCorp Solutions | July 2019 - May 2022</p>
+          <ul class="list-disc pl-5 mt-2 text-gray-600 dark:text-gray-300">
+            <li>Built scalable data pipelines using Apache Spark and Python, processing terabytes of data daily.</li>
+            <li>Designed SQL queries and stored procedures for business intelligence reporting.</li>
+            <li>Implemented CI/CD pipelines for data workflows using Jenkins and Docker.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 bg-white dark:bg-gray-900 section-hidden">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8 text-center">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Project 1 -->
+        <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md card-hover">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Snowflake Data Warehouse Optimization</h3>
+          <p class="text-gray-600 dark:text-gray-300 mt-2">Developed a Snowflake-based data warehouse for real-time analytics, reducing data latency by 50%. Utilized Snowpipe for continuous data ingestion and Python for automation.</p>
+          <button onclick="openModal('project1')" class="text-blue-600 dark:text-blue-400 mt-2 hover:underline">View Details</button>
+        </div>
+        <!-- Project 2 -->
+        <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md card-hover">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Cloud ETL Pipeline</h3>
+          <p class="text-gray-600 dark:text-gray-300 mt-2">Designed an ETL pipeline using AWS Glue and Snowflake to process structured and unstructured data, improving data availability for business teams.</p>
+          <button onclick="openModal('project2')" class="text-blue-600 dark:text-blue-400 mt-2 hover:underline">View Details</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-16 bg-gray-100 dark:bg-gray-800 section-hidden">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8 text-center">Skills</h2>
+      <div class="space-y-4">
+        <div>
+          <p class="text-gray-600 dark:text-gray-300">Snowflake</p>
+          <div class="w-full bg-gray-300 dark:bg-gray-600 rounded-full h-2.5">
+            <div class="bg-blue-600 h-2.5 rounded-full skill-bar" style="width: 90%"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-gray-600 dark:text-gray-300">Python</p>
+          <div class="w-full bg-gray-300 dark:bg-gray-600 rounded-full h-2.5">
+            <div class="bg-blue-600 h-2.5 rounded-full skill-bar" style="width: 85%"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-gray-600 dark:text-gray-300">SQL</p>
+          <div class="w-full bg-gray-300 dark:bg-gray-600 rounded-full h-2.5">
+            <div class="bg-blue-600 h-2.5 rounded-full skill-bar" style="width: 80%"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-gray-600 dark:text-gray-300">AWS</p>
+          <div class="w-full bg-gray-300 dark:bg-gray-600 rounded-full h-2.5">
+            <div class="bg-blue-600 h-2.5 rounded-full skill-bar" style="width: 75%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white dark:bg-gray-900 section-hidden">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8 text-center">Contact Me</h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300 text-center mb-6">Feel free to reach out for collaborations or opportunities!</p>
+      <div class="flex justify-center space-x-6">
+        <a href="mailto:alex.carter@example.com" class="text-blue-600 dark:text-blue-400 hover:underline">alex.carter@example.com</a>
+        <a href="https://linkedin.com/in/alexcarter" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">LinkedIn</a>
+        <a href="https://github.com/alexcarter" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 hidden">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+  </button>
+
+  <!-- Project Modal -->
+  <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-30">
+    <div class="bg-white dark:bg-gray-800 p-8 rounded-lg max-w-lg w-full">
+      <h3 id="modal-title" class="text-2xl font-bold text-gray-800 dark:text-white mb-4"></h3>
+      <p id="modal-description" class="text-gray-600 dark:text-gray-300 mb-4"></p>
+      <button onclick="closeModal()" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700">Close</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4 text-center">
+    <p>© 2025 Alex Carter. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Interactivity -->
+  <script>
+    // Theme Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    });
+    if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark');
+
+    // Scroll Animations
+    const sections = document.querySelectorAll('.section-hidden');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('section-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    sections.forEach(section => observer.observe(section));
+
+    // Skill Bar Animation
+    const skillBars = document.querySelectorAll('.skill-bar');
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.width = entry.target.getAttribute('style').match(/width:\s*(\d+)%/)[1] + '%';
+        }
+      });
+    }, { threshold: 0.5 });
+    skillBars.forEach(bar => skillObserver.observe(bar));
+
+    // Back to Top Button
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('hidden', window.scrollY < 300);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Modal Functionality
+    const projectData = {
+      project1: {
+        title: 'Snowflake Data Warehouse Optimization',
+        description: 'This project involved designing a Snowflake-based data warehouse to enable real-time analytics for Apple’s internal platforms. Key features included Snowpipe for continuous data ingestion, automated Python scripts for ETL processes, and advanced query optimizations, resulting in a 50% reduction in data latency.'
+      },
+      project2: {
+        title: 'Cloud ETL Pipeline',
+        description: 'Built a robust ETL pipeline using AWS Glue and Snowflake to handle both structured and unstructured data. The pipeline improved data availability for business teams by integrating with multiple data sources and automating data transformations, achieving a 30% increase in processing efficiency.'
+      }
+    };
+
+    function openModal(projectId) {
+      const modal = document.getElementById('project-modal');
+      const title = document.getElementById('modal-title');
+      const description = document.getElementById('modal-description');
+      title.textContent = projectData[projectId].title;
+      description.textContent = projectData[projectId].description;
+      modal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('project-modal').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
